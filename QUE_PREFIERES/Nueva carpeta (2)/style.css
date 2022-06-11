@@ -1,0 +1,56 @@
+body {
+  margin:0;
+  padding:0;
+  width:100%;
+  height:100%;
+  color:black;
+  font-weight:bold;
+  animation: myanimation 7s infinite;
+  overflow: hidden;
+}
+html{ 
+  width:100%;
+  height:100%;
+}
+#pregunta{
+    text-align:center;
+    margin-top:10%;
+    color:#FFF;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 70px;
+}
+#wyr{
+    text-align:center;
+    margin-top:10%;
+    color:#FFF;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 70px;
+}
+@keyframes myanimation {
+  0% {background-color: red;}
+  25%{background-color:#ff00dd;}
+  50%{background-color:#260080;}
+  75%{background-color:#2ba6a4;}
+  100% {background-color: #00ff88;}
+  100% {background-color: #eeff00;}
+  100% {background-color: #ff3300;}
+  100% {background-color: red;}
+}
+.container-fluid{
+  position:absolute;
+   bottom:0;
+   border: solid 3px white;
+}
+.opciones{
+  width:100%;
+  color:#FFF;
+  text-align: center;
+}
+.linea{
+  height:0px;
+  border-bottom: solid 2px white;
+}
+a:hover{
+  cursor:pointer;
+  opacity: 0.5;
+}
