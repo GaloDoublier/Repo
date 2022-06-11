@@ -1,0 +1,51 @@
+html,body{
+    height: 300px;
+    width: 300px;
+}
+#errores{
+    text-align: center;
+    text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+    color:red;
+}
+body{
+    background-color: blueviolet !important;
+}
+.titulo{
+    text-align: center;
+    color:yellow;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+.selec{
+    width:100% !important;
+}
+#dificultad{
+    margin-top: 10px !important;
+    position: relative;
+    left:28%;
+    width:35%;
+}
+.links{
+    text-align: center;
+    color:yellow;
+    font-size: larger;
+    margin-top:40px;
+}
+a:hover{
+    cursor:pointer;
+    opacity: 0.6;
+}
+button{
+    margin-top: 40px !important;
+    position: relative;
+    left:25%;
+}
+#texto{
+  font-size:20px;
+}
+.letraN{
+  padding: 0;
+  margin:0;
+  width:20px;
+  text-align: center;
+}
