@@ -46,7 +46,7 @@ function startTimer(){
 function endTimer(){
   var final = new Date().getTime() ;
   tiempo = document.getElementById("tiempo")
-  tiempo.innerText="tardaste:   " + (final-inicio)/1000 + " segundos"
+  tiempo.innerText="tardaste:   " + (final-inicio)/1000 + " segundos. " + "dificultad: "+ dificultad[0] + " y " + dificultad[1]
 }
 function guardarDatos(){
   rta=document.getElementById("rta").value
