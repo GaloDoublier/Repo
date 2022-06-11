@@ -29,6 +29,7 @@ function mostrarDificultad(dificultad){
   }
 }
 function empezarJuego(){
+  startTimer();
   dificultad=guardarDatos();
   contenedor= document.getElementsByClassName("container")[0];
   contenedor.remove();
@@ -36,7 +37,16 @@ function empezarJuego(){
   letraElegidaN=dificultad[0];
   letraElegidaE=dificultad[1];
   jugar();
-  
+}
+var inicio
+function startTimer(){
+   inicio = new Date().getTime() ;
+  console.log(inicio)
+}
+function endTimer(){
+  var final = new Date().getTime() ;
+  tiempo = document.getElementById("tiempo")
+  tiempo.innerText="tardaste:   " + (final-inicio)/1000 + " segundos"
 }
 function guardarDatos(){
   rta=document.getElementById("rta").value
@@ -67,6 +77,7 @@ function ganaron(){
     window.location.href="popup2.html"
   })
   div.appendChild(boton)  
+  endTimer();
   
 }
 

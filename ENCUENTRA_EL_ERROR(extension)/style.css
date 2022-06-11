@@ -7,6 +7,10 @@ html,body{
     text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
     color:red;
 }
+#tiempo{
+    text-align: center;
+    color:yellow;
+}
 body{
     background-color: blueviolet !important;
 }
