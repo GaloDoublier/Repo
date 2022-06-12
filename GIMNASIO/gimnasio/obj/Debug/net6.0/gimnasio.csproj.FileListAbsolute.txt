@@ -24,3 +24,11 @@ C:\Users\pdoub\OneDrive\Documentos\repoGalo\Repo\GIMNASIO\gimnasio\obj\Debug\net
 C:\Users\pdoub\OneDrive\Documentos\repoGalo\Repo\GIMNASIO\gimnasio\obj\Debug\net6.0\gimnasio.pdb
 C:\Users\pdoub\OneDrive\Documentos\repoGalo\Repo\GIMNASIO\gimnasio\obj\Debug\net6.0\gimnasio.genruntimeconfig.cache
 C:\Users\pdoub\OneDrive\Documentos\repoGalo\Repo\GIMNASIO\gimnasio\obj\Debug\net6.0\ref\gimnasio.dll
+C:\Users\pdoub\OneDrive\Documentos\repoGalo\Repo\GIMNASIO\gimnasio\bin\Debug\net6.0\FireSharp.dll
+C:\Users\pdoub\OneDrive\Documentos\repoGalo\Repo\GIMNASIO\gimnasio\bin\Debug\net6.0\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+C:\Users\pdoub\OneDrive\Documentos\repoGalo\Repo\GIMNASIO\gimnasio\bin\Debug\net6.0\Microsoft.Threading.Tasks.Extensions.dll
+C:\Users\pdoub\OneDrive\Documentos\repoGalo\Repo\GIMNASIO\gimnasio\bin\Debug\net6.0\Microsoft.Threading.Tasks.dll
+C:\Users\pdoub\OneDrive\Documentos\repoGalo\Repo\GIMNASIO\gimnasio\bin\Debug\net6.0\System.Net.Http.Extensions.dll
+C:\Users\pdoub\OneDrive\Documentos\repoGalo\Repo\GIMNASIO\gimnasio\bin\Debug\net6.0\System.Net.Http.Primitives.dll
+C:\Users\pdoub\OneDrive\Documentos\repoGalo\Repo\GIMNASIO\gimnasio\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\pdoub\OneDrive\Documentos\repoGalo\Repo\GIMNASIO\gimnasio\obj\Debug\net6.0\gimnasio.csproj.CopyComplete

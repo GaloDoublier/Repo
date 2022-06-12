@@ -1,4 +1,4 @@
-﻿using System.Diagnostics;
+using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using gimnasio.Models;
 using System.Data.SqlClient;
@@ -6,29 +6,15 @@ using Dapper;
 
 namespace gimnasio.Controllers;
 
-public class HomeController : Controller
+public class BD : Controller
 {
-    private readonly ILogger<HomeController> _logger;
+    private readonly ILogger<BD> _logger;
 
-    public HomeController(ILogger<HomeController> logger)
+    public BD(ILogger<BD> logger)
     {
         _logger = logger;
     }
-
-    public IActionResult Index()
-    {
-        return View();
-    }
-
-    public IActionResult perfil()
-    {
-        return View();
-    }
-
-    public IActionResult agregar()
-    {
-        return View();
-    }
+    
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
