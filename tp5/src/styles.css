@@ -1,0 +1,123 @@
+.carousel-indicators [data-bs-target] {
+    box-sizing: content-box;
+    flex: 0 1 auto;
+    width: 6px; /* change width */
+    height: 6px; /* change height */
+    padding: 0;
+    margin-right: 3px;
+    margin-left: 3px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    opacity: .5;
+    transition: opacity 0.6s ease;
+    border-radius: 100%;  /* add border-radius */
+}
+
+.derecha{
+    margin-left: auto !important;
+}
+.marcasT{
+    font-size: 3vh;
+}
+.margenL5{
+    margin-left:5% ;
+}
+.espacio20{
+    height:20px;
+}
+.Large{
+    font-size: large;
+}
+.Height25{
+    height: 25px;
+}
+.marginB15{
+    margin-bottom: 15px;
+}
+.centrarM{
+    display: flex; 
+    align-items: center;
+}
+.tarjeta{
+    margin-top: 20px;
+}
+.tarjeta2{
+    padding: 8px;
+}
+.TamanioImagen{
+    height:100px; 
+    width:90px;
+}
+.tituloPD{
+    font-size: large;
+}
+.carousel-indicators .active {
+    width: 7px;
+    height: 7px;
+
+    background-color: rgb(37, 37, 37);
+}
+
+.mx-auto {
+    margin-right: auto !important;
+    margin-left: auto !important;
+}
+
+
+.texto-f {
+    color:white;
+}
+
+.icon2 {
+display: inline-block;
+font-size: 27px;
+color: rgb(14, 101, 201);
+vertical-align: middle;
+}
+.icon {
+display: inline-block;
+font-size: 35px;
+color: white;
+vertical-align: middle;
+}
+
+.text{
+    display: inline-block;
+    vertical-align: middle;
+}
+.espacio{
+    margin-top:15px;
+}
+.publi{
+    width:100%;
+    height:200px;
+    border-top:15px solid rgb(157, 191, 196);
+    background-color: rgb(255, 255, 255);
+    margin-top:30px;
+    margin-bottom:20px;
+}
+.patro{
+    margin-right:20px;
+    margin-left:20px;
+}
+
+.card{
+    border-color: rgb(157, 191, 196) !important;
+    border-width: 1px;
+}
+.carta :hover{
+background-color:rgb(157, 191, 196) !important;
+}
+body{
+font-family: Helvetica;
+}
+.espacio{
+    min-height: 1vh; 
+    width:100%; 
+    background-color: rgb(148, 196, 179);
+}
