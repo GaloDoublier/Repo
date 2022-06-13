@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="dealer"></div>
+    <div id="jugador"></div>
+    <h3 id="mensajes"></h3>
+    <button id="boton1" onclick="pedirCarta()">Pedir</button>
+    <button id="boton2" onclick="quedarse()">Quedarse</button>
+    <div class="chips">
+		<a id="linkApuesta" onclick="apostar(10)"><div class="pokerchip white"></div></a>
+		<a id="linkApuesta" onclick="apostar(100)"><div class="pokerchip red"></div></a>
+		<a id="linkApuesta" onclick="apostar(500)"><div class="pokerchip blue"></div></a>
+		<a id="linkApuesta" onclick="apostar(1000)"><div class="pokerchip green"></div></a>
+		<a id="linkApuesta" onclick="apostar(5000)"><div class="pokerchip black"></div></a>
+	</div>
+    <div class="divPlata">
+        <h3>Total en fichas: <h3 id="plata"></h3></h3>  
+    </div>  
+    <div class="divApuesta">
+        <h3>tu apuesta: <h3 id="apuesta"></h3></h3>  
+    </div>  
+    <button id="apostar" onclick="empezarJuego();">apostar</button>  
+
+    <script src="script.js"></script>
+</body>
+</html>
+<!-- para estension https://melsdevadventures.blogspot.com/2018/03/poker-chip-css-only-checkbox.html -->
