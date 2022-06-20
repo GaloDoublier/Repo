@@ -1,0 +1,67 @@
+.navBarAzul{
+    background-color:#2EACFC;
+}
+.navbar-nav{
+    margin-left:auto !important;
+}
+.navbar-brand{
+    color:#F3EFE0 !important;
+}
+.ni{
+    color:#F3EFE0 !important;
+}
+.titulo{
+   text-align: left;
+   margin-left: 5%; 
+}
+.saludo{
+    margin-top:200px;
+    justify-content: center;
+    align-content: center;
+}
+#sombreado{
+    color:#9a9c9d;
+    text-align: left;
+    margin-left: 5%;
+}
+.forma{
+    height:600px;
+    width:500px;
+}
+#nombre{
+    color:white;
+    position: relative;
+    font-size: 30px;
+    top:45%;
+    left:35px;
+    animation: flotar 4s infinite ease-in-out; 
+}
+@keyframes flotar {
+    50% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(0);
+    }   
+}
+
+#about{
+    padding-top:100px;
+}
+
+.btnAM{
+    background-color:#2EACFC;
+    color:white;
+    border-radius:50PX;
+    border:none;
+    padding:10px;
+    font-size:20px;
+    margin-left:40%;
+    margin-top:70px;
+    cursor:pointer;
+}
+#aboutText{
+    font-size:20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-left:5%;
+}
