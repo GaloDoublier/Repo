@@ -35,8 +35,10 @@ width:600px;
 
 }
 .numeroE{
-    position: relative;
-    left:55%;
+    text-align: right;
+}
+.lenguaje{
+    width:70%
 }
 #nombre{
     color:white;
@@ -79,7 +81,9 @@ width:600px;
 }
 .progress{
     margin-top:15px;
-    width:70% !important;
+    width:100% !important;
     background-color: #cfcdcd !important;
     margin-bottom:15px;
+    margin-right: auto;
+    margin-left: auto;      
 }
