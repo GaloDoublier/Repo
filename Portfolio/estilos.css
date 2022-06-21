@@ -19,10 +19,7 @@
     justify-content: center;
     align-content: center;
 }
-.perfil{
-    margin-left:auto;
-    margin-right: auto;
-}
+
 #sombreado{
     color:#9a9c9d;
     text-align: left;
@@ -33,22 +30,30 @@ height:800px;
 width:600px;
 }
 
+.estadistica{
+    display:inline;
+
+}
+.numeroE{
+    position: relative;
+    left:55%;
+}
 #nombre{
     color:white;
-    display:inline;
     position: relative;
     font-size: 30px;
-    top:45%;
-    left:15%;
+    top:50%;
+    left:10%;
     /* font-size: 4vw; */
     animation: flotar 4s infinite ease-in-out; 
 }
+
 @keyframes flotar {
     50% {
-        margin-top: -10px;
+        top:45%;
     }
     100% {
-        margin-top: 0px;
+        top:50%;
     }   
 }
 
@@ -73,8 +78,8 @@ width:600px;
     margin-left:5%;
 }
 .progress{
-    margin-left:5%; 
     margin-top:15px;
     width:70% !important;
     background-color: #cfcdcd !important;
+    margin-bottom:15px;
 }
