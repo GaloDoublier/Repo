@@ -47,7 +47,20 @@ function endTimer(){
   var final = new Date().getTime() ;
   tiempo = document.getElementById("tiempo")
   tiempo.innerText="tardaste:   " + (final-inicio)/1000 + " segundos. " + "dificultad: "+ dificultad[0] + " y " + dificultad[1]
+  verMejorTiempo((final-inicio)/1000);
 }
+function verMejorTiempo(tiempoGuardado){
+  let tiempo = document.getElementById("tiempo")
+  let mejorTiempo = localStorage.getItem("mejorTiempo")
+  if(tiempoGuardado< mejorTiempo || mejorTiempo == null){
+    localStorage.setItem("mejorTiempo", tiempoGuardado)
+  }
+  else{
+    localStorage.setItem("mejorTiempo", mejorTiempo);
+  }
+  tiempo.textContent+= " mejor tiempo: " + localStorage.getItem("mejorTiempo") + " segundos"
+  }
+
 function guardarDatos(){
   rta=document.getElementById("rta").value
   return rta;
