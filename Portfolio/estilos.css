@@ -43,7 +43,7 @@ width:600px;
 #nombre{
     color:white;
     position: relative;
-    font-size: 30px;
+    font-size: 270%;
     top:50%;
     left:10%;
     /* font-size: 4vw; */
@@ -58,11 +58,9 @@ width:600px;
         top:50%;
     }   
 }
-
-#about{
-    padding-top:100px;
+.container{
+    width:100% !important;
 }
-
 .btnAM{
     background-color:#2EACFC;
     color:white;
@@ -78,6 +76,12 @@ width:600px;
     font-size:20px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin-left:5%;
+    margin-bottom: auto;
+    margin-top: auto;
+}
+.titulo2{
+    margin-left:5%;
+    margin-bottom: 5%;
 }
 .progress{
     margin-top:15px;
