@@ -51,14 +51,14 @@ function endTimer(){
 }
 function verMejorTiempo(tiempoGuardado){
   let tiempo = document.getElementById("tiempo")
-  let mejorTiempo = localStorage.getItem("mejorTiempo")
+  let mejorTiempo = localStorage.getItem("mejorTiempo"+" Dif " + dificultad)
   if(tiempoGuardado< mejorTiempo || mejorTiempo == null){
-    localStorage.setItem("mejorTiempo", tiempoGuardado)
+    localStorage.setItem("mejorTiempo"+" Dif " + dificultad, tiempoGuardado)
   }
   else{
-    localStorage.setItem("mejorTiempo", mejorTiempo);
+    localStorage.setItem("mejorTiempo"+" Dif " + dificultad, mejorTiempo);
   }
-  tiempo.textContent+= " mejor tiempo: " + localStorage.getItem("mejorTiempo") + " segundos"
+  tiempo.textContent+= " mejor tiempo: " + localStorage.getItem("mejorTiempo"+" Dif " + dificultad) + " segundos"
   }
 
 function guardarDatos(){
