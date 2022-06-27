@@ -70,11 +70,8 @@ width:600px;
 
 }
 .numeroE{
-<<<<<<< HEAD
     margin-left: 95%;
-=======
     margin-left:90%
->>>>>>> be56cbd62b715068b8f4209915ccfd46c1d7ce9d
 }
 .lenguaje{
     width:70%
@@ -82,15 +79,12 @@ width:600px;
 #nombre{
     color:white;
     position: relative;
-<<<<<<< HEAD
     bottom:65%;
     left:30%;
     font-size: 30px;
-=======
     font-size: 270%;
     top:50%;
     left:10%;
->>>>>>> be56cbd62b715068b8f4209915ccfd46c1d7ce9d
     /* font-size: 4vw; */
     animation: flotar 4s infinite ease-in-out; 
 }
@@ -103,14 +97,11 @@ width:600px;
         bottom:65%;
     }   
 }
-<<<<<<< HEAD
 
-
-=======
 .container{
     width:100% !important;
 }
->>>>>>> be56cbd62b715068b8f4209915ccfd46c1d7ce9d
+
 .btnAM{
     background-color:#BB004B;
     color:white;
