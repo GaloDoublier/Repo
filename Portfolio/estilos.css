@@ -259,6 +259,17 @@ width:600px;
 .custom-shape-divider-top-1656440430 .shape-fill {
     fill: #FE4E00;
 }
+form{
+    height:400px;
+    width:600px;
+    background-color: #BB004B;
+    border-radius: 35px;
+    margin-left: auto;
+    margin-right: auto;
+}
+label{
+    
+}
 .logosS:hover{
     transform: scale(1.5);
 }
