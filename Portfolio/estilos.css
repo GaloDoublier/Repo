@@ -1,7 +1,7 @@
 body{
     background-color: #08090A !important;
     color:#F3EFE0 !important;
-    font-family:Georgia, 'Times New Roman', Times, serif;
+    
 }
 .navBarAzul{
     background-color:#00000000;
@@ -181,4 +181,50 @@ width:600px;
     margin-left: auto;      
 }
 
+.custom-shape-divider-bottom-1656422232 {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    padding-bottom: 100px;;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
 
+.custom-shape-divider-bottom-1656422232 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 123px;
+}
+
+.custom-shape-divider-bottom-1656422232 .shape-fill {
+    fill: #FFAE03;
+}
+.Skills{
+    width:100%;
+    background-color: #FFAE03;
+    position:relative;
+    padding-top: 70px; 
+}
+
+.custom-shape-divider-top-1656422977 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1656422977 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 123px;
+}
+
+.custom-shape-divider-top-1656422977 .shape-fill {
+    fill: #FFAE03;
+}
