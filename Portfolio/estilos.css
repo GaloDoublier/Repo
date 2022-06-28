@@ -162,8 +162,8 @@ width:600px;
     cursor:pointer;
 }
 .titulo2{
-    font-size:20px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size:10vh;
+    text-align: center;
     margin-left:5%;
     margin-bottom: auto;
     margin-top: auto;
@@ -197,6 +197,10 @@ width:600px;
     display: block;
     width: calc(100% + 1.3px);
     height: 123px;
+}
+
+.projects{
+    background-color: #FE4E00;
 }
 
 .custom-shape-divider-bottom-1656422232 .shape-fill {
@@ -235,6 +239,48 @@ width:600px;
     transition: transform .2s;
     margin-bottom: 70px;;
 }
+.custom-shape-divider-top-1656440430 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1656440430 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 130px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-top-1656440430 .shape-fill {
+    fill: #FE4E00;
+}
 .logosS:hover{
     transform: scale(1.5);
+}
+.custom-shape-divider-bottom-1656439912 {
+    padding-bottom: 25vh;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1656439912 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 130px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1656439912 .shape-fill {
+    fill: #FE4E00;
 }
