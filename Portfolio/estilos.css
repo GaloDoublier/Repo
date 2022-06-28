@@ -161,6 +161,17 @@ width:600px;
     margin-top:70px;
     cursor:pointer;
 }
+.btnEN{
+    background-color:#e67f0d;
+    color:white;
+    border-radius:50PX;
+    border:none;
+    padding:10px;
+    font-size:20px;
+    margin-left:40%;
+    margin-top:70px;
+    cursor:pointer;
+}
 .titulo2{
     font-size:10vh;
     text-align: center;
@@ -271,9 +282,15 @@ label{
     padding-top:5%;
     padding-left: 20%;
 }
-input{
-    margin-top:5%;
-    margin-left:10%;
+.inputs{
+    width:60%;
+    max-width: 60%;
+    max-height: 200px;
+    position:relative;
+    left:20%;
+    display:inline;
+    border:solid 3px #e67f0d;
+    border-radius:15px;
 }
 .logosS:hover{
     transform: scale(1.5);
