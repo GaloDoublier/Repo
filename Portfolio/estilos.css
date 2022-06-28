@@ -228,3 +228,13 @@ width:600px;
 .custom-shape-divider-top-1656422977 .shape-fill {
     fill: #FFAE03;
 }
+.logosS{
+    max-height: 30vh;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    transition: transform .2s;
+    margin-bottom: 70px;;
+}
+.logosS:hover{
+    transform: scale(1.5);
+}
