@@ -163,16 +163,16 @@ width:600px;
 }
 .btnEN{
     background-color:#e67f0d;
-    position:absolute;
     color:white;
     border-radius:50px;
     border:none;
     padding:10px;
-    margin-left:13%;
+    margin-left:20%;
     font-size:20px;
     margin-top:2%;
     cursor:pointer;
 }
+
 .titulo2{
     margin-bottom: auto;
     font-size:8vw; 
@@ -326,11 +326,10 @@ label{
 }
 .contenidoFooter{
     position: absolute;
-    top:460%;
-    left:60%;
+    top:560%;
 }
-.contacto{
+/* .contacto{
     position:absolute;
-    top:430%;
+    top:530%;
     left:0;
-}
+} */
