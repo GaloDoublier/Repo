@@ -174,8 +174,8 @@ width:600px;
     cursor:pointer;
 }
 .titulo2{
-    font-size:80px;
     margin-bottom: auto;
+    font-size:8vw; 
     margin-top: auto;
     margin-bottom: 5%;
 }
@@ -270,9 +270,7 @@ width:600px;
     fill: #FE4E00;
 }
 form{
-    height:130%;
-    width:60%;
-    background-color: #BB004B;
+
     border-radius: 35px;
     margin-left: auto;
     margin-right: auto;
@@ -325,4 +323,14 @@ label{
 }
 .container-fluid{
     --bs-gutter-x: 0 !important;
+}
+.contenidoFooter{
+    position: absolute;
+    top:460%;
+    left:60%;
+}
+.contacto{
+    position:absolute;
+    top:430%;
+    left:0;
 }
