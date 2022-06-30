@@ -1,7 +1,6 @@
 body{
     background-color: #08090A !important;
     color:#F3EFE0 !important;
-    
 }
 .navBarAzul{
     background-color:#00000000;
@@ -324,12 +323,25 @@ label{
 .container-fluid{
     --bs-gutter-x: 0 !important;
 }
-.contenidoFooter{
-    position: absolute;
-    top:560%;
+
+.redes{
+   font-size: 150%;
+   list-style-type: none;
+   align-items: center;
+   padding-top: 15%;
+   text-align: center;  
 }
-/* .contacto{
-    position:absolute;
-    top:530%;
-    left:0;
-} */
+.logoT{
+    margin-left:4%;
+}
+i:hover{
+    transition: transform .2s;
+    color:#BB004B;
+}
+body::-webkit-scrollbar-track {
+    background: orange !important;        /* color of the tracking area */
+  }
+  a {
+    color: #FFF !important;
+    text-decoration: none;
+}
