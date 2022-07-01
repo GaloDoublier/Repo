@@ -174,7 +174,7 @@ width:600px;
 
 .titulo2{
     margin-bottom: auto;
-    font-size:8vw; 
+    font-size:6vw; 
     margin-top: auto;
     margin-bottom: 5%;
 }
@@ -237,16 +237,17 @@ width:600px;
     width: calc(100% + 1.3px);
     height: 123px;
 }
+.videos{
+    height: 20px;
+    width: 40px;
+}
 
 .custom-shape-divider-top-1656422977 .shape-fill {
     fill: #FFAE03;
 }
 .logosS{
-    max-height: 30vh;
-    margin-left: auto !important;
-    margin-right: auto !important;
     transition: transform .2s;
-    margin-bottom: 70px;;
+    margin:30px auto;
 }
 .custom-shape-divider-top-1656440430 {
     position: relative;
@@ -328,7 +329,6 @@ label{
    font-size: 150%;
    list-style-type: none;
    align-items: center;
-   padding-top: 15%;
    text-align: center;  
 }
 .logoT{
@@ -338,10 +338,67 @@ i:hover{
     transition: transform .2s;
     color:#BB004B;
 }
-body::-webkit-scrollbar-track {
-    background: orange !important;        /* color of the tracking area */
-  }
+::-webkit-scrollbar {
+    display: none;
+}
   a {
     color: #FFF !important;
     text-decoration: none;
 }
+
+
+  .flip3D {
+    width: 290px;
+    height: 330px;
+  }
+  .tarjeta {
+    text-align: center;
+    width: 290px;
+    height: 30%;
+    border-radius: 7px;
+    backface-visibility: hidden;
+    transition: transform 0.5s linear 0s;
+    position: absolute;
+  }
+  .tarjeta.atras {
+    background-color: #FFAE03;
+  }
+  .fondoTarjeta1{
+    background-image: url("imagenes/Pong.JPG");
+    background-size: cover;
+  }
+  .fondoTarjeta2{
+    background-image: url("imagenes/STE.JPG");
+    background-size: cover;
+  }
+  .fondoTarjeta3{
+    background-image: url("imagenes/WYR.JPG");
+    background-size: cover;
+  }
+  .flip3D > .adelante {
+    transform: perspective(900px) rotateY(0deg);
+  }
+  .flip3D > .atras {
+    transform: perspective(900px) rotateY(180deg);
+    z-index: 1;
+  }
+  
+  .flip3D:hover > .adelante {
+    transform: perspective(900px) rotateY(-180deg);
+  }
+  .flip3D:hover > .atras {
+    transform: perspective(900px) rotateY(0deg);
+  }
+  .tituloP{
+    text-align: center;
+    margin-top:30%
+  }
+  .btnPR{
+    background-color: #FFAE03;
+    border-radius: 30px;
+    color: #FFF;
+    text-align: center;
+    font-size: 16px;
+    padding: 8px;
+    cursor: pointer; 
+  }
