@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <title>¿Perro o Gato? IA</title>
+</head>
+<body>
+    <style>
+        body{
+            background-color: #bb9d81;
+            font-family: Courier;
+        }
+        h1{
+            text-align: center;
+            color: #786A5D;
+            font-size: 10vh;
+            text-shadow: 5px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
+               1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+        }
+        #canvas{
+            border: 8px solid white;
+            border-radius: 10px;
+            padding-left: 0;
+            padding-right: 0;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+        img{
+            width: 400px !important;
+            height: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .resultado{
+            text-align: center;
+            font-size: large;
+            color: #f6f6f6;
+            margin-top: 20px;
+        }
+
+    </style>
+    
+    <div class="container">
+
+        <div class="row">
+            <div class="col">
+                <h1>¿Perro o gato?</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-8 col-md-8 col-sm-12 mx-auto">
+                <!-- Stream video via webcam -->
+                <div class="video-wrap">
+                    <video id="video" playsinline autoplay width="0px" height="0px"></video>
+                </div>
+                <!-- Webcam video snapshot -->
+                <canvas class="img-fluid"id="canvas" width="640" height="480"></canvas>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                <img id="robot" class="img-fluid" src="imagenes/robot1.png" alt="">
+                <div class="resultado">
+                    <h2 id="resultados">Cargando modelo...</h2>
+                </div>
+            </div>
+            <canvas id="canvasOculto" width="100" height="100" style="display:none"></canvas>
+        </div>
+
+    </div>
+
+
+
+
+
+    <!-- scripts -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
+
+    <script>
+      function resample_single(canvas, width, height, resize_canvas) {
+          var width_source = canvas.width;
+          var height_source = canvas.height;
+          width = Math.round(width);
+          height = Math.round(height);
+
+          var ratio_w = width_source / width;
+          var ratio_h = height_source / height;
+          var ratio_w_half = Math.ceil(ratio_w / 2);
+          var ratio_h_half = Math.ceil(ratio_h / 2);
+
+          var ctx = canvas.getContext("2d");
+          var ctx2 = resize_canvas.getContext("2d");
+          var img = ctx.getImageData(0, 0, width_source, height_source);
+          var img2 = ctx2.createImageData(width, height);
+          var data = img.data;
+          var data2 = img2.data;
+
+          for (var j = 0; j < height; j++) {
+              for (var i = 0; i < width; i++) {
+                  var x2 = (i + j * width) * 4;
+                  var weight = 0;
+                  var weights = 0;
+                  var weights_alpha = 0;
+                  var gx_r = 0;
+                  var gx_g = 0;
+                  var gx_b = 0;
+                  var gx_a = 0;
+                  var center_y = (j + 0.5) * ratio_h;
+                  var yy_start = Math.floor(j * ratio_h);
+                  var yy_stop = Math.ceil((j + 1) * ratio_h);
+                  for (var yy = yy_start; yy < yy_stop; yy++) {
+                      var dy = Math.abs(center_y - (yy + 0.5)) / ratio_h_half;
+                      var center_x = (i + 0.5) * ratio_w;
+                      var w0 = dy * dy; //pre-calc part of w
+                      var xx_start = Math.floor(i * ratio_w);
+                      var xx_stop = Math.ceil((i + 1) * ratio_w);
+                      for (var xx = xx_start; xx < xx_stop; xx++) {
+                          var dx = Math.abs(center_x - (xx + 0.5)) / ratio_w_half;
+                          var w = Math.sqrt(w0 + dx * dx);
+                          if (w >= 1) {
+                              //pixel too far
+                              continue;
+                          }
+                          //hermite filter
+                          weight = 2 * w * w * w - 3 * w * w + 1;
+                          var pos_x = 4 * (xx + yy * width_source);
+                          //alpha
+                          gx_a += weight * data[pos_x + 3];
+                          weights_alpha += weight;
+                          //colors
+                          if (data[pos_x + 3] < 255)
+                              weight = weight * data[pos_x + 3] / 250;
+                          gx_r += weight * data[pos_x];
+                          gx_g += weight * data[pos_x + 1];
+                          gx_b += weight * data[pos_x + 2];
+                          weights += weight;
+                      }
+                  }
+                  data2[x2] = gx_r / weights;
+                  data2[x2 + 1] = gx_g / weights;
+                  data2[x2 + 2] = gx_b / weights;
+                  data2[x2 + 3] = gx_a / weights_alpha;
+              }
+          }
+
+
+          ctx2.putImageData(img2, 0, 0);
+      }
+
+        'use strict';
+
+            const video = document.getElementById('video');
+            const canvas = document.getElementById('canvas');
+            const errorMsgElement = document.querySelector('span#errorMsg');
+            var resultados= document.getElementById('resultados');
+            var robot= document.getElementById('robot');
+
+
+            var modelo = null;
+
+            async function cargarModelo(){
+                modelo = await tf.loadLayersModel('model.json');
+                resultados.textContent="modelo cargado y listo para predecir";
+            }
+
+            cargarModelo();
+
+            var otroCanvas = document.getElementById('canvasOculto');
+
+            function perro(){
+                resultados.textContent="Es un perro";
+                robot.src="imagenes/robotP.png";
+            }
+            function gato(){
+                resultados.textContent="Es un gato";
+                robot.src="imagenes/robotG.png";
+            }
+
+            function predecir(){
+                if (modelo != null){
+                    resample_single(canvas, 100, 100, otroCanvas);
+
+                    let context = otroCanvas.getContext('2d');
+                    let imageData = context.getImageData(0, 0, 100, 100);
+
+                    let array = [];
+                    let array100 =[];
+                    
+
+                    for(let i=0; i<imageData.data.length; i+=4){
+                        let rojo = imageData.data[i] / 255;
+                        let verde = imageData.data[i+1] / 255;
+                        let azul = imageData.data[i+2] / 255;
+
+                        let gris = (rojo+verde+azul)/3;
+                        array100.push([gris]);
+                        if (array100.length==100){
+                            array.push(array100);
+                            array100 = [];
+                        }
+                    }
+                    
+                    array = [array];
+                    
+                    console.log(array);
+                    var tensor = tf.tensor4d(array);
+                    var prediction = modelo.predict(tensor).dataSync();
+                    
+                    if(prediction>0.5){
+                        perro();
+                    }
+                    else{
+                        gato();
+                    }
+                }
+                setTimeout(predecir, 150);
+            }
+
+            predecir();
+
+            const constraints = {
+                audio: false,
+                video: {
+                    width: 1280, height: 720
+                }
+            };
+
+            // Access webcam
+            async function init() {
+                try {
+                    const stream = await navigator.mediaDevices.getUserMedia(constraints);
+                    handleSuccess(stream);
+                } catch (e) {
+                    errorMsgElement.innerHTML = `navigator.getUserMedia error:${e.toString()}`;
+                }
+            }
+
+            // Success
+            function handleSuccess(stream) {
+                window.stream = stream;
+                video.srcObject = stream;
+            }
+
+            // Load init
+            init();
+
+            // Draw image
+            var context = canvas.getContext('2d');
+            function procesarCamara(){
+                context.drawImage(video, 0, 0, 640, 480, 0, 0, 640, 480);
+                setTimeout(procesarCamara, 20);
+            }
+            procesarCamara();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+</body>
+</html>
