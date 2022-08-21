@@ -9,17 +9,8 @@
         "48": "/imagenes/logo-48.png",
         "128": "/imagenes/logo-128.png"
     },
-    "background": {
-        "service_worker": "background.js"
-    },
     "action": {
         "default_popup": "popup.html"
     },
-    "options_page": "options.html",
-    "permissions": [
-        "storage",
-        "activeTab",
-        "scripting",
-        "tabs"
-    ]
+    "options_page": "options.html"
 }

@@ -174,7 +174,7 @@ width:600px;
 
 .titulo2{
     margin-bottom: auto;
-    font-size:6vw; 
+    font-size:400%; 
     margin-top: auto;
     margin-bottom: 5%;
 }
@@ -289,7 +289,7 @@ label{
     resize: none;
 }
 .parrafo{
-    font-size: 2vh;
+    font-size: 150%;
 }
 .inputs:focus { 
     outline: none !important;
@@ -354,7 +354,7 @@ i:hover{
   .tarjeta {
     text-align: center;
     width: 290px;
-    height: 30%;
+    height: 300px;
     border-radius: 7px;
     backface-visibility: hidden;
     transition: transform 0.5s linear 0s;

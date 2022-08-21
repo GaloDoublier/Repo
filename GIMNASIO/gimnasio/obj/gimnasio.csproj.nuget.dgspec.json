@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pdoub\\OneDrive\\Documentos\\repoGalo\\Repo\\GIMNASIO\\gimnasio\\gimnasio.csproj": {}
+    "C:\\Users\\galod\\Documents\\ORT\\2022\\prog-apart\\REPOSITORIO\\projects\\GIMNASIO\\gimnasio\\gimnasio.csproj": {}
   },
   "projects": {
-    "C:\\Users\\pdoub\\OneDrive\\Documentos\\repoGalo\\Repo\\GIMNASIO\\gimnasio\\gimnasio.csproj": {
+    "C:\\Users\\galod\\Documents\\ORT\\2022\\prog-apart\\REPOSITORIO\\projects\\GIMNASIO\\gimnasio\\gimnasio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pdoub\\OneDrive\\Documentos\\repoGalo\\Repo\\GIMNASIO\\gimnasio\\gimnasio.csproj",
+        "projectUniqueName": "C:\\Users\\galod\\Documents\\ORT\\2022\\prog-apart\\REPOSITORIO\\projects\\GIMNASIO\\gimnasio\\gimnasio.csproj",
         "projectName": "gimnasio",
-        "projectPath": "C:\\Users\\pdoub\\OneDrive\\Documentos\\repoGalo\\Repo\\GIMNASIO\\gimnasio\\gimnasio.csproj",
-        "packagesPath": "C:\\Users\\pdoub\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pdoub\\OneDrive\\Documentos\\repoGalo\\Repo\\GIMNASIO\\gimnasio\\obj\\",
+        "projectPath": "C:\\Users\\galod\\Documents\\ORT\\2022\\prog-apart\\REPOSITORIO\\projects\\GIMNASIO\\gimnasio\\gimnasio.csproj",
+        "packagesPath": "C:\\Users\\galod\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\galod\\Documents\\ORT\\2022\\prog-apart\\REPOSITORIO\\projects\\GIMNASIO\\gimnasio\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\pdoub\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\galod\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -38,9 +38,13 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "FireSharp": {
+            "Dapper": {
               "target": "Package",
-              "version": "[2.0.4, )"
+              "version": "[2.0.123, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.3, )"
             }
           },
           "imports": [
@@ -61,7 +65,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }
