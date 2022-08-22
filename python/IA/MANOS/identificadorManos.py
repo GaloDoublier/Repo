@@ -5,7 +5,7 @@ import mediapipe as mp
 detector = mp.solutions.hands
 dibujo = mp.solutions.drawing_utils
 estilos  = mp.solutions.drawing_styles
-camara = cv2.VideoCapture(1)
+camara = cv2.VideoCapture(0)
 
 with detector.Hands(min_detection_confidence=0.5) as manos:
     while True:
@@ -14,8 +14,8 @@ with detector.Hands(min_detection_confidence=0.5) as manos:
             print("no se pudo conectar a la camara")
             continue
         imagen = cv2.cvtColor(imagen, cv2.COLOR_BGR2RGB)
+        imagen=cv2.flip(imagen,1)
         resultado =  manos.process(imagen)
-
             #dibujar
         imagen = cv2.cvtColor(imagen, cv2.COLOR_RGB2BGR)
         if resultado.multi_hand_landmarks:
